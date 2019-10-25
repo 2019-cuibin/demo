@@ -1,0 +1,42 @@
+spring:
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/
+#      suffix: .jsp
+#  static-path-pattern: /**
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.132.155.201:3306/spring_boot
+    username: root
+    password: 12345
+####################
+#thymeleaf
+####################
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    cache: false
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+
+#####################
+#freemarker
+#####################
+#  freemarker:
+#    template-loader-path: classpath:/templates/
+#    suffix: .ftl
+#    charset: UTF-8
+#    content-type: text/html
+#    settings:
+#      number_format: '0.##'
+server:
+  port: 8088
+####################
+#pagehelper
+####################
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
